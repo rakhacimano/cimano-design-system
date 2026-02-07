@@ -1,26 +1,182 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cimano-50: #F0F9FF;
+  --color-cimano-100: #E0F2FE;
+  --color-cimano-200: #BAE6FD;
+  --color-cimano-300: #7DD3FC;
+  --color-cimano-400: #38BDF8;
+  --color-cimano-500: #0085FF;
+  /* Premium Royal Blue */
+  --color-cimano-600: #0284C7;
+  --color-cimano-700: #0369A1;
+  --color-cimano-800: #075985;
+  --color-cimano-900: #0C4A6E;
+
+  --color-slate-50: #F9FAFB;
+  /* Cool Gray / Zinc tweak */
+  --color-slate-100: #F3F4F6;
+  --color-slate-200: #E5E7EB;
+  --color-slate-300: #D1D5DB;
+  --color-slate-400: #9CA3AF;
+  --color-slate-500: #6B7280;
+  --color-slate-600: #4B5563;
+  --color-slate-700: #374151;
+  --color-slate-800: #1F2937;
+  --color-slate-900: #111827;
+  /* Deep Charcoal */
+
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Modern, subtle shadows (Linear-style) */
+  --shadow-cimano-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-cimano-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-cimano-card: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-cimano-hover: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.08);
+
+  --radius-xl: 0.75rem;
+  /* Slightly tighter radius for professional feel */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  /* Figma Color System (Node 3-48) */
+  --color-primary-100: #5F33BA;
+  --color-primary-200: #6F47C1;
+  --color-primary-300: #7F5CC8;
+  --color-primary-400: #8F70CF;
+  --color-primary-500: #9F85D6;
+  --color-primary-600: #AF99DD;
+  --color-primary-700: #BFADE3;
+  --color-primary-800: #CFC2EA;
+  --color-primary-900: #DFD6F1;
+  --color-primary-1000: #F6F4FB;
+  --color-primary-1100: #FFFFFF;
+
+  --color-secondary-100: #FFB614;
+  --color-secondary-200: #FFBD2C;
+  --color-secondary-300: #FFC543;
+  --color-secondary-400: #FFCC5B;
+  --color-secondary-500: #FFD372;
+  --color-secondary-600: #FFDB8A;
+  --color-secondary-700: #FFE2A1;
+  --color-secondary-800: #FFE9B9;
+  --color-secondary-900: #FFF0D0;
+  --color-secondary-1000: #FFF8E8;
+  --color-secondary-1100: #FFFFFF;
+
+  --color-info-100: #1B84FF;
+  --color-info-200: #3290FF;
+  --color-info-300: #499DFF;
+  --color-info-400: #5FA9FF;
+  --color-info-500: #76B5FF;
+  --color-info-600: #8DC2FF;
+  --color-info-700: #A4CEFF;
+  --color-info-800: #BBDAFF;
+  --color-info-900: #D1E6FF;
+  --color-info-1000: #F0F7FF;
+  --color-info-1100: #FFFFFF;
+
+  --color-success-100: #17C653;
+  --color-success-200: #2ECC64;
+  --color-success-300: #45D175;
+  --color-success-400: #5DD787;
+  --color-success-500: #74DD98;
+  --color-success-600: #8BE3A9;
+  --color-success-700: #A2E8BA;
+  --color-success-800: #B9EECB;
+  --color-success-900: #D1F4DD;
+  --color-success-1000: #F3FCF6;
+  --color-success-1100: #FFFFFF;
+
+  --color-warning-100: #F6B100;
+  --color-warning-200: #F7B91A;
+  --color-warning-300: #F8C133;
+  --color-warning-400: #F9C84D;
+  --color-warning-500: #FAD066;
+  --color-warning-600: #FBD880;
+  --color-warning-700: #FBE099;
+  --color-warning-800: #FCE8B3;
+  --color-warning-900: #FDEFCC;
+  --color-warning-1000: #FEFAF0;
+  --color-warning-1100: #FFFFFF;
+
+  --color-danger-100: #F8285A;
+  --color-danger-200: #F93E6B;
+  --color-danger-300: #F9537B;
+  --color-danger-400: #FA698C;
+  --color-danger-500: #FB7E9C;
+  --color-danger-600: #FC94AD;
+  --color-danger-700: #FCA9BD;
+  --color-danger-800: #FDBFCE;
+  --color-danger-900: #FED4DE;
+  --color-danger-1000: #FEF0F4;
+  --color-danger-1100: #FFFFFF;
+
+  --color-grey-100: #1B1C22;
+  --color-grey-200: #323338;
+  --color-grey-300: #49494E;
+  --color-grey-400: #5F6064;
+  --color-grey-500: #76777A;
+  --color-grey-600: #8D8E91;
+  --color-grey-700: #A4A4A7;
+  --color-grey-800: #BBBBBD;
+  --color-grey-900: #D1D2D3;
+  --color-grey-1000: #EFEFF0;
+  --color-grey-1100: #F9F9F9;
+
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #FAFBFB;
+  --color-neutral-300: #F6F6F6;
+  --color-neutral-400: #F1F2F2;
+  --color-neutral-500: #EDEDED;
+  --color-neutral-600: #E8E9E9;
+  --color-neutral-700: #E3E4E5;
+  --color-neutral-800: #DFE0E0;
+  --color-neutral-900: #DADBDC;
+  --color-neutral-1000: #D6D7D7;
+  --color-neutral-1100: #D1D2D3;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #212529;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background: var(--color-slate-50);
+    color: var(--color-slate-900);
+    @apply antialiased;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-slate-300);
+    border-radius: 999px;
+    border: 3px solid var(--color-slate-50);
+    /* Creates padding effect */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-slate-400);
+  }
+
+  /* Selection Color */
+  ::selection {
+    background: var(--color-cimano-100);
+    color: var(--color-cimano-900);
+  }
 }
