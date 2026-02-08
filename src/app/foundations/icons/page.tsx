@@ -14,7 +14,7 @@ const sections = [
 
 const popularIcons = [
     "Home", "Search", "Heart", "Star", "Send", "Download",
-    "Upload", "Edit", "Delete", "Close", "Check",
+    "Upload", "Edit", "Delete",
     "Arrow", "User", "Setting", "Bag", "Chart", "Calendar",
     "Message", "Bookmark", "Filter", "Plus", "Notification", "Show"
 ];
