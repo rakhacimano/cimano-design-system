@@ -12,7 +12,7 @@ const sections = [
     { id: "implementation", label: "Implementation" },
 ];
 
-const popularIcons = [
+const safeIcons = [
     "Home", "Search", "Heart", "Star", "Send", "Download",
     "Upload", "Edit", "Delete", "Document",
     "User", "Calendar", "Message", "Plus"
@@ -60,7 +60,7 @@ export default function IconsPage() {
 
                     <div className="bg-white rounded-2xl border border-slate-100 p-8">
                         <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
-                            {popularIcons.map((icon) => (
+                            {safeIcons.map((icon) => (
                                 <div
                                     key={icon}
                                     className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-slate-50 transition-colors group"

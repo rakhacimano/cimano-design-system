@@ -26,7 +26,7 @@ export default function Home() {
             <Link href="/components">
               <Button size="lg" className="h-14 px-8 text-lg rounded-2xl shadow-xl shadow-cimano-500/20 w-full sm:w-auto">
                 Browse Components
-                <Icon name="ArrowRight" set="bold" size="small" />
+                <Icon name="ChevronRight" set="bold" size="small" />
               </Button>
             </Link>
             <Link href="/foundations">
@@ -95,7 +95,7 @@ export default function Home() {
             <Icon name="Document" set="bulk" size="large" className="text-cimano-600 mb-6" />
             <h3 className="text-xl font-bold text-slate-900 mb-2">Docs</h3>
             <Link href="/foundations" className="text-sm font-semibold text-cimano-600 hover:text-cimano-700 flex items-center gap-1">
-              Read Guides <Icon name="ArrowRight" set="light" size="small" />
+              Read Guides <Icon name="ChevronRight" set="light" size="small" />
             </Link>
           </div>
         </div>
