@@ -14,9 +14,8 @@ const sections = [
 
 const popularIcons = [
     "Home", "Search", "Heart", "Star", "Send", "Download",
-    "Upload", "Edit", "Delete",
-    "Arrow", "User", "Setting", "Bag", "Chart", "Calendar",
-    "Message", "Bookmark", "Filter", "Plus", "Notification", "Show"
+    "Upload", "Edit", "Delete", "Document",
+    "User", "Calendar", "Message", "Plus"
 ];
 
 export default function IconsPage() {
