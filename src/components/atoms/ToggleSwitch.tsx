@@ -2,7 +2,7 @@
 
 import React from "react";
 
-interface RadioButtonProps {
+interface ToggleSwitchProps {
     checked?: boolean;
     onChange?: (checked: boolean) => void;
     size?: "small" | "medium" | "large";
@@ -11,14 +11,14 @@ interface RadioButtonProps {
     className?: string;
 }
 
-export function RadioButton({
+export function ToggleSwitch({
     checked = false,
     onChange,
     size = "medium",
     label,
     disabled = false,
     className = "",
-}: RadioButtonProps) {
+}: ToggleSwitchProps) {
     const sizeClasses = {
         small: {
             container: "w-6 h-4",

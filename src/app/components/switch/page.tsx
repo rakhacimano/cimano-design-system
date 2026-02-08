@@ -1,7 +1,7 @@
 "use client";
 
 import { DocLayout } from "@/components/templates/DocLayout";
-import { RadioButton } from "@/components/atoms/RadioButton";
+import { ToggleSwitch } from "@/components/atoms/ToggleSwitch";
 import { useState } from "react";
 
 const sections = [
@@ -13,7 +13,7 @@ const sections = [
     { id: "implementation", label: "Implementation" },
 ];
 
-export default function RadioButtonPage() {
+export default function SwitchPage() {
     const [demoChecked, setDemoChecked] = useState(true);
     const [smallChecked, setSmallChecked] = useState(false);
     const [mediumChecked, setMediumChecked] = useState(true);
@@ -34,7 +34,7 @@ export default function RadioButtonPage() {
                     </div>
 
                     <div className="bg-white rounded-2xl border border-slate-100 p-8">
-                        <RadioButton
+                        <ToggleSwitch
                             checked={demoChecked}
                             onChange={setDemoChecked}
                             label="Enable notifications"
@@ -55,12 +55,12 @@ export default function RadioButtonPage() {
                             <span className="text-sm font-semibold text-slate-900">Small</span>
                             <div className="bg-white rounded-2xl border border-slate-100 p-6">
                                 <div className="space-y-4">
-                                    <RadioButton
+                                    <ToggleSwitch
                                         size="small"
                                         checked={smallChecked}
                                         onChange={setSmallChecked}
                                     />
-                                    <RadioButton
+                                    <ToggleSwitch
                                         size="small"
                                         checked={smallChecked}
                                         onChange={setSmallChecked}
@@ -74,12 +74,12 @@ export default function RadioButtonPage() {
                             <span className="text-sm font-semibold text-slate-900">Medium</span>
                             <div className="bg-white rounded-2xl border border-slate-100 p-6">
                                 <div className="space-y-4">
-                                    <RadioButton
+                                    <ToggleSwitch
                                         size="medium"
                                         checked={mediumChecked}
                                         onChange={setMediumChecked}
                                     />
-                                    <RadioButton
+                                    <ToggleSwitch
                                         size="medium"
                                         checked={mediumChecked}
                                         onChange={setMediumChecked}
@@ -93,12 +93,12 @@ export default function RadioButtonPage() {
                             <span className="text-sm font-semibold text-slate-900">Large</span>
                             <div className="bg-white rounded-2xl border border-slate-100 p-6">
                                 <div className="space-y-4">
-                                    <RadioButton
+                                    <ToggleSwitch
                                         size="large"
                                         checked={largeChecked}
                                         onChange={setLargeChecked}
                                     />
-                                    <RadioButton
+                                    <ToggleSwitch
                                         size="large"
                                         checked={largeChecked}
                                         onChange={setLargeChecked}
@@ -122,8 +122,8 @@ export default function RadioButtonPage() {
                             <span className="text-sm font-semibold text-slate-900">Active</span>
                             <div className="bg-white rounded-2xl border border-slate-100 p-6">
                                 <div className="space-y-4">
-                                    <RadioButton checked={false} label="Unchecked" />
-                                    <RadioButton checked={true} label="Checked" />
+                                    <ToggleSwitch checked={false} label="Unchecked" />
+                                    <ToggleSwitch checked={true} label="Checked" />
                                 </div>
                             </div>
                         </div>
@@ -132,8 +132,8 @@ export default function RadioButtonPage() {
                             <span className="text-sm font-semibold text-slate-900">Disabled</span>
                             <div className="bg-white rounded-2xl border border-slate-100 p-6">
                                 <div className="space-y-4">
-                                    <RadioButton checked={false} disabled label="Disabled Off" />
-                                    <RadioButton checked={true} disabled label="Disabled On" />
+                                    <ToggleSwitch checked={false} disabled label="Disabled Off" />
+                                    <ToggleSwitch checked={true} disabled label="Disabled On" />
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@ export default function RadioButtonPage() {
                         <div className="max-w-3xl mx-auto">
                             <div className="relative flex items-center justify-center py-16">
                                 <div className="relative">
-                                    <RadioButton checked={true} label="Label Text" size="large" />
+                                    <ToggleSwitch checked={true} label="Label Text" size="large" />
 
                                     {/* Callout 1 - Track */}
                                     <div className="absolute -left-44 top-1/2 -translate-y-1/2 flex items-center gap-3">
@@ -251,7 +251,7 @@ export default function RadioButtonPage() {
                 <section id="implementation" className="scroll-mt-24 space-y-6">
                     <div>
                         <h2 className="text-2xl font-bold text-slate-900">Implementation</h2>
-                        <p className="text-slate-600 mt-1">How to use the Toggle Switch.</p>
+                        <p className="text-slate-600 mt-1">How to use the Toggle ToggleSwitch.</p>
                     </div>
 
                     <div className="space-y-6">
@@ -259,14 +259,14 @@ export default function RadioButtonPage() {
                             <h3 className="text-lg font-semibold text-slate-900 mb-3">Basic Usage</h3>
                             <div className="bg-slate-900 rounded-2xl p-6 overflow-x-auto">
                                 <pre className="text-sm text-slate-300 font-mono">
-                                    {`import { RadioButton } from "@/components/atoms/RadioButton";
+                                    {`import { ToggleSwitch } from "@/components/atoms/ToggleSwitch";
 import { useState } from "react";
 
 export function MyComponent() {
   const [enabled, setEnabled] = useState(false);
   
   return (
-    <RadioButton
+    <ToggleSwitch
       checked={enabled}
       onChange={setEnabled}
       label="Enable feature"
@@ -281,9 +281,9 @@ export function MyComponent() {
                             <h3 className="text-lg font-semibold text-slate-900 mb-3">Different Sizes</h3>
                             <div className="bg-slate-900 rounded-2xl p-6 overflow-x-auto">
                                 <pre className="text-sm text-slate-300 font-mono">
-                                    {`<RadioButton size="small" checked={enabled} onChange={setEnabled} />
-<RadioButton size="medium" checked={enabled} onChange={setEnabled} />
-<RadioButton size="large" checked={enabled} onChange={setEnabled} />`}
+                                    {`<ToggleSwitch size="small" checked={enabled} onChange={setEnabled} />
+<ToggleSwitch size="medium" checked={enabled} onChange={setEnabled} />
+<ToggleSwitch size="large" checked={enabled} onChange={setEnabled} />`}
                                 </pre>
                             </div>
                         </div>

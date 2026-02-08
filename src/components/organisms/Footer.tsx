@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="bg-white border-t border-slate-200 py-16">
             <div className="container mx-auto px-6 max-w-7xl">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div className="space-y-6">
                         <Logo />
                         <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
@@ -20,15 +20,6 @@ export const Footer = () => {
                             <li><Link href="/foundations" className="hover:text-cimano-600 transition-colors">Foundations</Link></li>
                             <li><Link href="/components" className="hover:text-cimano-600 transition-colors">Components</Link></li>
                             <li><Link href="/icons" className="hover:text-cimano-600 transition-colors">Icons</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold text-slate-900 mb-6 text-sm uppercase tracking-wider">Company</h4>
-                        <ul className="space-y-3 text-sm text-slate-500">
-                            <li><Link href="#" className="hover:text-cimano-600 transition-colors">About</Link></li>
-                            <li><Link href="#" className="hover:text-cimano-600 transition-colors">Careers</Link></li>
-                            <li><Link href="#" className="hover:text-cimano-600 transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 

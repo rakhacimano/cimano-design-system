@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/organisms/Navbar";
-import { Footer } from "@/components/organisms/Footer";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -27,7 +26,6 @@ export default function RootLayout({
         <main className="min-h-screen pt-16">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

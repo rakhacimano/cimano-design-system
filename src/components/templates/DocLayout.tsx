@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "../organisms/Sidebar";
+import { Footer } from "../organisms/Footer";
 
 interface Section {
     id: string;
@@ -105,6 +106,9 @@ export const DocLayout: React.FC<DocLayoutProps> = ({ children, title, descripti
                         )}
                     </div>
                 </div>
+
+                {/* Footer below content */}
+                <Footer />
             </div>
         </div>
     );
